@@ -21,6 +21,7 @@ $( document ).ready(function(){
 		total = 0;
 		$("#won-lost-alert").empty();
 		$("#score").empty();
+
 	});
 
 
@@ -30,21 +31,23 @@ $( document ).ready(function(){
 	}
 
 
+
 	function alert()
 	{
 		if(total == numgiven)
 		{
 			document.getElementById("won-lost-alert").innerHTML = "You Won!";
+			wins = wins + 1;
+			document.getElementById("won-stat").innerHTML = "Wins: " + wins;
 		}
 		else if(total > numgiven)
 		{
 			document.getElementById("won-lost-alert").innerHTML = "You Lost!";
-		}
-		else
-		{
-			return null;
+			losses = losses + 1;
+			document.getElementById("lost-stat").innerHTML = "Losses: " + losses;
 		}
 	}
+	
 
 
 	$("#blue").on ("click", function()
@@ -82,6 +85,7 @@ $( document ).ready(function(){
 		console.log(total);
 	})
 })
+
 
 
 
