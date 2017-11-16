@@ -20,6 +20,7 @@ $( document ).ready(function(){
 		document.getElementById("randomnum").innerHTML = numgiven;
 		total = 0;
 		$("#won-lost-alert").empty();
+		$("#score").empty();
 	});
 
 
