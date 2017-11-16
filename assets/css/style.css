@@ -1,0 +1,23 @@
+
+body{
+	background-color: rgba(143, 216, 189, 0.62);
+}
+
+
+.jumbotron{
+	color: rgba(143, 216, 189, 0.62);
+}
+
+#jumbotron-head{
+	color: green;
+	text-align: center;
+}
+
+#directions{
+	background-color: rgba(143, 216, 189, 0.62);
+}
+
+.panel-body{
+	background-color: rgba(143, 216, 189, 0.62);
+}
+
