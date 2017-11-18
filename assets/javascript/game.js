@@ -2,11 +2,11 @@ $( document ).ready(function(){
 
 
 	//var randomnum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-	var numgiven = "";
-	var bluenum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
-	var greennum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
-	var rednum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
-	var yellownum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+	var numGiven = "";
+	var blueNum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+	var greenNum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+	var redNum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
+	var yellowNum = Math.floor(Math.random() * (11 - 1 + 1)) + 1;
 	var total = 0;
 	var wins = 0;
 	var losses = 0;
@@ -15,9 +15,9 @@ $( document ).ready(function(){
 
 	$("#play").on ("click", function()
 	{
-		var randomnum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
-		numgiven = randomnum;
-		document.getElementById("randomnum").innerHTML = numgiven;
+		var randomNum = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+		numGiven = randomNum;
+		document.getElementById("randomNum").innerHTML = numGiven;
 		total = 0;
 		$("#won-lost-alert").empty();
 		$("#score").empty();
@@ -25,7 +25,7 @@ $( document ).ready(function(){
 	});
 
 
-	function newtotal()
+	function newTotal()
 	{
 		document.getElementById("score").innerHTML = total;
 	}
@@ -34,16 +34,16 @@ $( document ).ready(function(){
 
 	function alert()
 	{
-		if(total == numgiven)
+		if(total == numGiven)
 		{
 			document.getElementById("won-lost-alert").innerHTML = "You Won!";
-			wins = wins + 1;
+			wins++;
 			document.getElementById("won-stat").innerHTML = "Wins: " + wins;
 		}
-		else if(total > numgiven)
+		else if(total > numGiven)
 		{
 			document.getElementById("won-lost-alert").innerHTML = "You Lost!";
-			losses = losses + 1;
+			losses++;
 			document.getElementById("lost-stat").innerHTML = "Losses: " + losses;
 		}
 	}
@@ -52,8 +52,8 @@ $( document ).ready(function(){
 
 	$("#blue").on ("click", function()
 	{
-		total = bluenum + total;
-		newtotal();
+		total = blueNum + total;
+		newTotal();
 		alert();	
 		console.log(total);
 	})
@@ -61,8 +61,8 @@ $( document ).ready(function(){
 
 	$('#green').on ('click', function()
 	{
-		total = greennum + total;
-		newtotal();
+		total = greenNum + total;
+		newTotal();
 		alert();
 		console.log(total);
 	})
@@ -70,8 +70,8 @@ $( document ).ready(function(){
 
 	$('#red').on ('click', function()
 	{
-		total = rednum + total;
-		newtotal();
+		total = redNum + total;
+		newTotal();
 		alert();
 		console.log(total);
 	})
@@ -79,8 +79,8 @@ $( document ).ready(function(){
 
 	$('#yellow').on ('click', function()
 	{
-		total = yellownum + total;
-		newtotal();
+		total = yellowNum + total;
+		newTotal();
 		alert();
 		console.log(total);
 	})
